@@ -1,4 +1,5 @@
 package org.junit.tests.assertion;
+import java.util.Comparator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.instanceOf;
@@ -39,6 +40,23 @@ public class AssertionTest {
     @Test(expected = AssertionError.class)
     public void fails() {
         Assert.fail();
+    }
+    
+    @Test
+    public void assertGreaterThan() {
+         Assert.assertGreaterThan(new Integer(50), new Integer(10), new Comparator<Integer>() {
+             public int compare(Integer i1, Integer i2) 
+             {
+                return i1.compareTo(i2);
+             }
+         });
+         
+         Assert.assertGreaterThan(new String("ZZ"), new String("AA"), new Comparator<String>() {
+             public int compare(String i1, String i2) 
+             {
+                      return i1.compareTo(i2);
+             }
+         });
     }
 
     @Test
