@@ -42,6 +42,16 @@ public class Assert {
             fail(message);
         }
     }
+    
+    public static void assertGreaterThan(int n1, int n2)
+    {
+        assertTrue(n1>n2);
+    }
+    
+    public static void assertGreaterThan(float n1, float n2)
+    {
+        assertTrue(n1>n2);
+    }
 
     /**
      * Asserts that a condition is true. If it isn't it throws an

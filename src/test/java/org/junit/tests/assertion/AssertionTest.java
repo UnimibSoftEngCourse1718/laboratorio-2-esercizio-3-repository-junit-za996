@@ -40,6 +40,12 @@ public class AssertionTest {
     public void fails() {
         Assert.fail();
     }
+    
+    @Test
+    public void assertGreaterInt()
+    {
+        Assert.assertGreaterThan(10,5);
+    }
 
     @Test
     public void failWithNoMessageToString() {
