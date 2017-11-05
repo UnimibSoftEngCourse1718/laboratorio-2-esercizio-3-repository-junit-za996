@@ -58,6 +58,11 @@ public class AssertionTest {
              }
          });
     }
+         
+    public void assertGreaterInt()
+    {
+        Assert.assertGreaterThan(10,5);
+    }
 
     @Test
     public void failWithNoMessageToString() {
